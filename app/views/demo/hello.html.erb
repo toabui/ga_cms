@@ -1,0 +1,32 @@
+<h1>Demo#hello</h1>
+<p>Demo Hello Template</p>
+
+<p>Params using the view [params:id] </p>
+ID: <%= params[:id] %><br>
+Page: <%= params[:page] %><br>
+
+<p>Params from Controller using instance variables</p>
+ID: <%= @id %><br>
+Page: <%= @page + 1%><br>
+
+<p>Passing in a local variable<p>
+<% target = "world" %>
+<%= "Hello #{target}" %><br>
+
+<!-- simple times do ruby method-->
+<% 3.times do %>
+<%= "xxx" %>
+<% end %>
+
+<br>
+
+<% @array.each do |n| %>
+<%= n %><br>
+<% end %>
+
+<%= link_to("index page", {:controller => 'demo', :action => 'index'}) %>
+
+<hr>
+
+<%= params.inspect %><br>
+<%= @array.inspect %>
